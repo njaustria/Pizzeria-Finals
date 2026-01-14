@@ -1,7 +1,7 @@
 <?php
-define('SMS_GATEWAY_URL', getenv('SMS_GATEWAY_URL') ?: 'http://192.168.5.45:8080');
-define('SMS_GATEWAY_USER', getenv('SMS_GATEWAY_USER') ?: 'sms');
-define('SMS_GATEWAY_PASS', getenv('SMS_GATEWAY_PASS') ?: '095zctJi');
+define('SMS_GATEWAY_URL', getenv('SMS_GATEWAY_URL') ?: 'xxxxxxxxxxx');
+define('SMS_GATEWAY_USER', getenv('SMS_GATEWAY_USER') ?: 'xxx');
+define('SMS_GATEWAY_PASS', getenv('SMS_GATEWAY_PASS') ?: 'xxxxxxx');
 
 /**
  * Send SMS message
