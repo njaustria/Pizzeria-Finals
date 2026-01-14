@@ -1,0 +1,64 @@
+# Pizzeria - .gitignore
+
+# Environment files
+.env
+.env.local
+
+# Configuration files with sensitive data
+config/production.php
+
+# Log files
+*.log
+error_log
+debug.log
+
+# Uploaded images (optional - uncomment if you don't want to track uploads)
+# assets/images/pizzas/*
+# !assets/images/pizzas/.gitkeep
+
+# Cache files
+cache/
+tmp/
+temp/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Composer
+vendor/
+composer.phar
+composer.lock
+
+# NPM (if using)
+node_modules/
+package-lock.json
+
+# Backup files
+*.bak
+*.backup
+*.sql.backup
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# PHP
+*.php~
+*.swp
+
+# Session files
+sessions/
+
+# Temporary files
+*.tmp
+*.temp
