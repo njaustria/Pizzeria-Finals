@@ -813,17 +813,32 @@ require_once 'includes/navbar.php';
                             <form method="POST">
                                 <div class="form-group">
                                     <label for="current_password">Current Password *</label>
-                                    <input type="password" id="current_password" name="current_password" class="form-control" required>
+                                    <div style="position: relative;">
+                                        <input type="password" id="current_password" name="current_password" class="form-control password-input" required>
+                                        <button type="button" class="btn btn-sm show-password-btn" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: #000; color: #fff; border: none;" onclick="togglePasswordVisibility('current_password', this)">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="new_password">New Password *</label>
-                                    <input type="password" id="new_password" name="new_password" class="form-control" required minlength="6">
+                                    <div style="position: relative;">
+                                        <input type="password" id="new_password" name="new_password" class="form-control password-input" required minlength="6">
+                                        <button type="button" class="btn btn-sm show-password-btn" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: #000; color: #fff; border: none;" onclick="togglePasswordVisibility('new_password', this)">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="confirm_password">Confirm New Password *</label>
-                                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                                    <div style="position: relative;">
+                                        <input type="password" id="confirm_password" name="confirm_password" class="form-control password-input" required>
+                                        <button type="button" class="btn btn-sm show-password-btn" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: #000; color: #fff; border: none;" onclick="togglePasswordVisibility('confirm_password', this)">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
 
                                 <button type="submit" name="change_password" class="btn btn-primary">
@@ -1122,6 +1137,20 @@ require_once 'includes/navbar.php';
             detailsDiv.style.display = 'none';
             iconElement.className = 'fas fa-eye';
             textElement.textContent = 'Show Message';
+        }
+    }
+
+    function togglePasswordVisibility(inputId, btn) {
+        const input = document.getElementById(inputId);
+        const icon = btn.querySelector('i');
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
         }
     }
 </script>
